@@ -28,11 +28,11 @@ def filtro(wp,wr):
     n = np.arange(-k,k+1,1)
 
     #w = besseli(0,b*np.sqrt(1-(4/M**2)*n**2))
-    
+
     w = np.i0(b*np.sqrt(1-(4/M**2)*n**2))
     w = np.divide(w,besseli(0,b))
 
     h = wc/math.pi*np.sinc(wc*n/math.pi)*w
 
     return h
-    
+
